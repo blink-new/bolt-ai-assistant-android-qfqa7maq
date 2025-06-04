@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "Bolt AI Assistant",
+    "slug": "bolt-ai-assistant",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "bolt",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.bolt.assistant"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#1a1a1a"
+      },
+      "package": "com.bolt.assistant"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": ["expo-router"],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "EXPO_PUBLIC_OPENAI_API_KEY": "${process.env.EXPO_PUBLIC_OPENAI_API_KEY}",
+      "eas": {
+        "projectId": "your-eas-project-id"
+      }
+    }
+  }
+}
